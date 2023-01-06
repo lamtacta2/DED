@@ -190,16 +190,16 @@ firebase
             labelsb[i-1] = workbook2.Sheets.Sheet1[locale1].v.slice(1,workbook2.Sheets.Sheet1[locale1].v.length-1);  
         }
 
-        var layoutx1 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool witdh M<sub>w</sub> [mm]"}, title: "(a) M<sub>w</sub>"};
-        var layoutx3 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool area M<sub>a</sub> [mm<sup>2</sup>]"}, title: "(c) M<sub>a</sub>"};
-        var layoutx2 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool depth M<sub>d</sub> [mm]"}, title: "(b) M<sub>d</sub>"};
+        var layoutx1 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool witdh M<sub>w</sub> [mm]"}, title: "(a) M<sub>w</sub>"};
+        var layoutx3 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool area M<sub>a</sub> [mm<sup>2</sup>]"}, title: "(c) M<sub>a</sub>"};
+        var layoutx2 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool depth M<sub>d</sub> [mm]"}, title: "(b) M<sub>d</sub>"};
         
-        var layoutx4 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
-        var layoutx5 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
-        var layoutx6 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
-        var layoutx7 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
-        var layoutx8 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
-        var layoutx9 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx4 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx5 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx6 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx7 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx8 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx9 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
           
         // Define Data
         var datax1 = [{x: labelsa, y: data1, mode:"lines"}];
