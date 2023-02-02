@@ -2,7 +2,6 @@ var today = new Date();
 var date = today.getDate() + '/' +(today.getMonth()+1)+'/'+ today.getFullYear();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 var dateTime = time+' '+date;
-
 document.getElementById("Time_S").innerHTML = dateTime;
 
 firebase
@@ -11,21 +10,20 @@ firebase
 .on("value", function (snap) {
 
   if (snap.val().Print == 1){
-
     var today1 = new Date();
     var date1 = today1.getDate() + '/' +(today1.getMonth()+1)+'/'+ today1.getFullYear();
     var time1 = today1.getHours() + ":" + today1.getMinutes() + ":" + today1.getSeconds();
     var dateTime1 = time1+' '+date1;
-    document.getElementById("Time_St").innerHTML = dateTime1;
+    document.getElementById("Time_ST").innerHTML = dateTime1;
   }
 
   (async() => {
 
     if (snap.val().control == 1){
 
-    document.getElementById("at").innerHTML = snap.val().at;
-    document.getElementById("lie").innerHTML = snap.val().p;  
-    document.getElementById("spt").innerHTML = snap.val().spt;
+    // document.getElementById("at").innerHTML = snap.val().at;
+    // document.getElementById("lie").innerHTML = snap.val().p;  
+    // document.getElementById("spt").innerHTML = snap.val().spt;
 
     document.getElementById("liex").innerHTML = snap.val().p;
     document.getElementById("atx").innerHTML = snap.val().at;
@@ -190,16 +188,16 @@ firebase
             labelsb[i-1] = workbook2.Sheets.Sheet1[locale1].v.slice(1,workbook2.Sheets.Sheet1[locale1].v.length-1);  
         }
 
-        var layoutx1 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool witdh M<sub>w</sub> [mm]"}, title: "(a) M<sub>w</sub>"};
-        var layoutx3 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool area M<sub>a</sub> [mm<sup>2</sup>]"}, title: "(c) M<sub>a</sub>"};
-        var layoutx2 = { xaxis: {title: "Time (s)"}, yaxis: {title: "Melting pool depth M<sub>d</sub> [mm]"}, title: "(b) M<sub>d</sub>"};
+        var layoutx1 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool witdh M<sub>w</sub> [mm]"}, title: "(a) M<sub>w</sub>"};
+        var layoutx3 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool area M<sub>a</sub> [mm<sup>2</sup>]"}, title: "(c) M<sub>a</sub>"};
+        var layoutx2 = { xaxis: {title: "Layout number L"}, yaxis: {title: "Melting pool depth M<sub>d</sub> [mm]"}, title: "(b) M<sub>d</sub>"};
         
-        var layoutx4 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
-        var layoutx5 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
-        var layoutx6 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
-        var layoutx7 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
-        var layoutx8 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
-        var layoutx9 = {xaxis: {title: "Time (s)"}, yaxis: {title: "Temperature  (K)"}};
+        var layoutx4 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx5 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx6 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx7 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx8 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
+        var layoutx9 = {xaxis: {title: "t (s)"}, yaxis: {title: "T (K)"}};
           
         // Define Data
         var datax1 = [{x: labelsa, y: data1, mode:"lines"}];
