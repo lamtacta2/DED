@@ -64,7 +64,10 @@ firebase
             const labelsa = [];
             const labelsb = [];
   
-            let k=2;
+            let k = 2;
+            k = snap.val().k;
+            let s = 1;
+            let check = 1;
           
             let url1 = "";
             let url2 = "";
@@ -201,14 +204,39 @@ firebase
             var datax1 = [{x: labelsa, y: data1, mode:"lines"}];
 
            function update(){
-
              if (k<1978){
-              k = k+1;
-             if (k < 1978){data_update(k);}
-             Plotly.newPlot("myPlot", data, layout);
-             Plotly.newPlot("myPlot1", datax1, layout1);
+              s = s + 1;
+                if(s%10==1){
+                  firebase
+                  .database()
+                  .ref()
+                  .on("value", function (snap) {
+                     check = snap.val().control;
+                     if(snap.val().k == 1977){
+                        k = 1977;
+                     }
+                  })
+                }
+
+                if(check == 2){
+                  firebase
+                  .database()
+                  .ref()
+                  .update({k: k}) 
+                }
+
+
+                if(check == 1){
+                  k = k+1;
+                  if(k>1978){
+                     k = 1978;
+                  }
+                  data_update(k);
+                  Plotly.newPlot("myPlot", data, layout);
+                  Plotly.newPlot("myPlot1", datax1, layout1);
+            }
              
              requestAnimationFrame(update);
 
-           }}
+             }}
            requestAnimationFrame(update);}})(); }) 
