@@ -40,6 +40,7 @@
 
       main6{
         width: 40%;
+        max-height: 100px;
       }
 
       main7{
@@ -121,13 +122,13 @@
   <main>
     <main5>
         <div1 id="unity-container" class="unity-desktop">
-          <canvas id="unity-canvas" width= 100% height= 70% ></canvas>
+          <canvas id="unity-canvas" height= 100% style="min-height: 595px;max-height: 1000px;" ></canvas>
         </div1>
     </main5>
-    <main6 style="float: right; max-height: 100%;">
-        <img src="p1.png" style=" justify-content: center; align-items: center; text-align: center; width: 90%; max-height: 200px; ">
-        <div class="solid" id="myPlot" style="height: 5%; max-height: 300px;"></div>
-        <div class="solid" id="myPlot1" style="height: 5%; max-height: 300px;"></div>
+    <main6 style="float: right;">
+        <img src="p1.png" style="width: 90%; max-height: 200px; ">
+        <div class="solid" id="myPlot" style="max-height: 300px;"></div>
+        <div class="solid" id="myPlot1" style="max-height: 300px;"></div>
     </main6>
   </main>
 
